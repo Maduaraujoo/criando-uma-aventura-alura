@@ -1,0 +1,57 @@
+<!-- Início da aventura -->
+<div id="inicio">
+  <h1>Bem-vindo à aventura!</h1>
+  <p>Você está em uma ilha deserta e precisa encontrar um tesouro.</p>
+  <button onclick="irPara('praia')">Ir para a praia</button>
+  <button onclick="irPara('floresta')">Ir para a floresta</button>
+</div>
+
+<!-- Praia -->
+<div id="praia" style="display: none;">
+  <h1>Você está na praia!</h1>
+  <p>Você vê um barco à distância.</p>
+  <button onclick="irPara('barco')">Ir para o barco</button>
+  <button onclick="irPara('inicio')">Voltar ao início</button>
+</div>
+
+<!-- Floresta -->
+<div id="floresta" style="display: none;">
+  <h1>Você está na floresta!</h1>
+  <p>Você ouve um som estranho.</p>
+  <button onclick="irPara('caverna')">Ir para a caverna</button>
+  <button onclick="irPara('inicio')">Voltar ao início</button>
+</div>
+
+<!-- Barco -->
+<div id="barco" style="display: none;">
+  <h1>Você está no barco!</h1>
+  <p>Você encontra um mapa do tesouro.</p>
+  <button onclick="irPara('tesouro')">Ir para o tesouro</button>
+  <button onclick="irPara('praia')">Voltar à praia</button>
+</div>
+
+<!-- Caverna -->
+<div id="caverna" style="display: none;">
+  <h1>Você está na caverna!</h1>
+  <p>Você encontra um obstáculo.</p>
+  <button onclick="irPara('floresta')">Voltar à floresta</button>
+</div>
+
+<!-- Tesouro -->
+<div id="tesouro" style="display: none;">
+  <h1>Parabéns, você encontrou o tesouro!</h1>
+  <p>Você ganhou!</p>
+  <button onclick="irPara('inicio')">Jogar novamente</button>
+</div>
+
+<script>
+  function irPara(local) {
+    document.getElementById(local).style.display = 'block';
+    document.getElementById('inicio').style.display = 'none';
+    document.getElementById('praia').style.display = 'none';
+    document.getElementById('floresta').style.display = 'none';
+    document.getElementById('barco').style.display = 'none';
+    document.getElementById('caverna').style.display = 'none';
+    document.getElementById('tesouro').style.display = 'none';
+  }
+</script>
